@@ -1,0 +1,8 @@
+#June 26, 2019.
+# Code used to retrieve the palcement IDs for all impressions
+
+
+Select 
+event. placement_id
+from adh.cm_dt_impressions
+group by 1
