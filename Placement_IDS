@@ -1,8 +1,12 @@
 #June 26, 2019.
-# Code used to retrieve the palcement IDs for all impressions
+# Code used to retrieve the palcement IDs, and site placements for all impressions
 
 
 Select 
-event. placement_id
-from adh.cm_dt_impressions
-group by 1
+event.placement_id,
+site_placement
+from adh.cm_dt_impressions as imp
+left join 
+adh.cm_dt_placement as pla
+on imp.event.advertiser_ID = pla.advertiser_ID
+group by 1,2
