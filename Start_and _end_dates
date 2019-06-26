@@ -1,0 +1,6 @@
+#function in order to get the start and end dates for Tableau
+
+Select 
+max(event.event_time) max,
+min(event.event_time) min
+from adh.cm_dt_impressions
