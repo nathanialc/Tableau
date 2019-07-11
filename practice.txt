@@ -1,1 +1,1 @@
-This is just for practice and to understand Github
+this is an update to practice.txt
